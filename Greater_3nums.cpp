@@ -3,24 +3,7 @@
 using namespace std;
 
 int max_of_three(int a,int b,int c){
-    if(a>b){
-        if(a>c){
-            cout<<a;
-        }
-        else{
-            cout<<c;
-        }
-    }
-    if(b>a){
-        if(b>c){
-            cout<<b;
-        }
-        else{
-            cout<<c;
-        }
-    }
-    
-    return 0;
+    return max(max(a,b),max(b,c));
 }
 
 int main(){
@@ -31,7 +14,8 @@ int main(){
     cin>>b;
     cout<<"Enter third number:";
     cin>>c;
-    max_of_three(a,b,c);
+    int ans = max_of_three(a, b, c);
+    cout<<ans;
 
     return 0;
 }
